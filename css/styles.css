@@ -3,6 +3,7 @@
   --color0: rgba(255, 255, 255, 1);
   --color0-00: rgba(255, 255, 255, 0);
   --color0-02: rgba(255, 255, 255, 0.2);
+  --color0-07: rgba(255, 255, 255, 0.75);
   --color1: rgba(255, 111, 89, 1);
   --color2: rgba(37, 68, 65, 1);
   --color3: rgba(67, 170, 139, 1);
@@ -57,7 +58,6 @@ body {
 header.main-header {
   background-color: var(--color1);
   color: var(--color0);
-  margin-bottom: 20px;
 }
 
 .jumbotron {
@@ -69,7 +69,39 @@ header.main-header {
 }
 
 
+/* Gift List Status Bar */
+
+.u_gift-list-status-bar {
+  background-color: var(--color5);
+  color: var(--color0-07);
+  padding: 0;
+  max-height: 0px;
+  transition: max-height var(--transTime) ease, padding var(--transTime) ease;
+}
+
+.u_gift-list-status-bar b {
+  color: var(--color0);
+}
+
+.u_gift-list-status-bar.isShown {
+  max-height: 70px;
+  padding: 10px 0px;
+}
+
+.u_gift-list-status-bar.isSticky {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  z-index: 1000;
+}
+
+
 /* Gift List */
+
+.u_gift-list {
+  margin-top: 20px;
+}
 
 .u_gift-item {
   padding-bottom: 30px;
