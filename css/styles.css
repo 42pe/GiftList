@@ -1,7 +1,8 @@
 :root {
   --colorX: rgba(30, 20, 20, 1);
   --color0: rgba(255, 255, 255, 1);
-  --color0-01: rgba(255, 255, 255, 0.2);
+  --color0-00: rgba(255, 255, 255, 0);
+  --color0-02: rgba(255, 255, 255, 0.2);
   --color1: rgba(177, 116, 15, 1);
   --color2: rgba(255, 208, 123, 1);
   --color3: rgba(246, 245, 174, 1);
@@ -18,6 +19,7 @@
   background-color: var(--color5);
   color: var(--color0);
   transition: background-color var(--transTime) ease;
+  font-weight: bold;
 }
 
 .btn-cta:hover {
@@ -57,8 +59,13 @@ header.main-header {
 
 /* Gift List */
 
+.u_gift-item {
+  padding-bottom: 30px;
+}
+
 .u_gift-item>div.image-container {
   background-size: cover;
+  background-position: center center;
   padding-top: 200px;
   margin-bottom: 10px;
 }
@@ -71,7 +78,7 @@ header.main-header {
   font-weight: bold;
 }
 
-.u_gift-item>div.item-content .price {
+.u_gift-item .price {
   color: var(--color5);
   display: inline-block;
   font-weight: bold;
@@ -81,7 +88,7 @@ header.main-header {
   padding-right: 15px;
 }
 
-.u_gift-item>div.item-content .price:after {
+.u_gift-item .price:after {
   font-size: 0.4em;
   font-weight: normal;
   content: 'c/u.';
@@ -90,8 +97,8 @@ header.main-header {
   top: 0px;
 }
 
-.u_gift-item>div.item-content .commited:after {
-  content: ' commited already';
+.u_gift-item .already-committed:after {
+  content: ' committed already';
 }
 
 .u_gift-item>div.item-content .details-link, .u_gift-item>div.item-content .give-less-link {
@@ -108,5 +115,46 @@ header.main-header {
 }
 
 .u_gift-item.isGivingLess .give-default {
+  display: none;
+}
+
+.u_gift-item.isCommitted>div.image-container {
+  opacity: 0.3;
+}
+
+.u_gift-item.isCommitted .title {
+  font-weight: bold;
+  opacity: 0.3;
+}
+
+.u_gift-item.isCommitted>div.item-content .price {
+  font-size: 1.2em;
+}
+
+.u_gift-item.isCommitted .self-committed {
+  font-size: 1.1em;
+  background-color: var(--color4);
+  color: var(--color0);
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.u_gift-item.isCommitted .self-committed a {
+  font-size: 0.75em;
+  color: var(--color0);
+  opacity: 0.8;
+  transition: opacity var(--transTime) ease, border-color var(--transTime) ease;
+  border-bottom: 1px solid transparent;
+}
+
+.u_gift-item.isCommitted .self-committed-info a:hover {
+  opacity: 1;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color0);
+}
+
+.u_gift-item.isCommitted .give-default {
   display: none;
 }
