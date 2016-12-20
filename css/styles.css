@@ -3,12 +3,11 @@
   --color0: rgba(255, 255, 255, 1);
   --color0-00: rgba(255, 255, 255, 0);
   --color0-02: rgba(255, 255, 255, 0.2);
-  --color1: rgba(177, 116, 15, 1);
-  --color2: rgba(255, 208, 123, 1);
-  --color3: rgba(246, 245, 174, 1);
-  --color4: rgba(253, 184, 51, 1);
-  --color5: rgba(219, 76, 64, 1);
-  --color5-01: rgba(229, 86, 74, 1);
+  --color1: rgba(255, 111, 89, 1);
+  --color2: rgba(37, 68, 65, 1);
+  --color3: rgba(67, 170, 139, 1);
+  --color4: rgba(178, 176, 155, 1);
+  --color5: rgba(239, 48, 84, 1);
   --transTime: 300ms;
 }
 
@@ -23,8 +22,21 @@
 }
 
 .btn-cta:hover {
-  background-color: var(--color5-01);
+  background-color: var(--color1);
   color: var(--color0);
+}
+
+.icon-small {
+  display: inline-block;
+  min-width: 16px;
+  text-align: center;
+}
+
+.icon-big {
+  display: inline-block;
+  min-width: 18px;
+  text-align: center;
+  font-size: 1.2em !important;
 }
 
 .text-smaller {
@@ -43,13 +55,13 @@ body {
 }
 
 header.main-header {
-  background-color: var(--color5);
+  background-color: var(--color1);
   color: var(--color0);
   margin-bottom: 20px;
 }
 
 .jumbotron {
-  background-color: var(--color5);
+  background-color: var(--color1);
 }
 
 .jumbotron hr.my-2 {
@@ -91,10 +103,14 @@ header.main-header {
 .u_gift-item .price:after {
   font-size: 0.4em;
   font-weight: normal;
-  content: 'c/u.';
+  content: 'ea.';
   position: absolute;
-  right: -5px;
+  right: -2px;
   top: 0px;
+}
+
+.u_gift-item .already-committed {
+  font-style: italic;
 }
 
 .u_gift-item .already-committed:after {
@@ -103,7 +119,7 @@ header.main-header {
 
 .u_gift-item>div.item-content .details-link, .u_gift-item>div.item-content .give-less-link {
   font-size: 0.8em;
-  color: var(--color4);
+  color: var(--color3);
 }
 
 .u_gift-item .give-less {
@@ -133,7 +149,7 @@ header.main-header {
 
 .u_gift-item.isCommitted .self-committed {
   font-size: 1.1em;
-  background-color: var(--color4);
+  background-color: var(--color1);
   color: var(--color0);
   text-align: center;
   display: block;
