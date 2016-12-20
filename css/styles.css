@@ -1,0 +1,112 @@
+:root {
+  --colorX: rgba(30, 20, 20, 1);
+  --color0: rgba(255, 255, 255, 1);
+  --color0-01: rgba(255, 255, 255, 0.2);
+  --color1: rgba(177, 116, 15, 1);
+  --color2: rgba(255, 208, 123, 1);
+  --color3: rgba(246, 245, 174, 1);
+  --color4: rgba(253, 184, 51, 1);
+  --color5: rgba(219, 76, 64, 1);
+  --color5-01: rgba(229, 86, 74, 1);
+  --transTime: 300ms;
+}
+
+
+/* Generic styles */
+
+.btn-cta {
+  background-color: var(--color5);
+  color: var(--color0);
+  transition: background-color var(--transTime) ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--color5-01);
+  color: var(--color0);
+}
+
+.text-smaller {
+  font-size: 0.8em;
+}
+
+.text-faded {
+  opacity: 0.5;
+}
+
+
+/* General styles */
+
+body {
+  color: var(--colorX);
+}
+
+header.main-header {
+  background-color: var(--color5);
+  color: var(--color0);
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-color: var(--color5);
+}
+
+.jumbotron hr.my-2 {
+  border-color: var(--color0-01);
+}
+
+
+/* Gift List */
+
+.u_gift-item>div.image-container {
+  background-size: cover;
+  padding-top: 200px;
+  margin-bottom: 10px;
+}
+
+.u_gift-item>div.image-container>img {
+  display: none;
+}
+
+.u_gift-item .title {
+  font-weight: bold;
+}
+
+.u_gift-item>div.item-content .price {
+  color: var(--color5);
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.6em;
+  padding-bottom: 5px;
+  position: relative;
+  padding-right: 15px;
+}
+
+.u_gift-item>div.item-content .price:after {
+  font-size: 0.4em;
+  font-weight: normal;
+  content: 'c/u.';
+  position: absolute;
+  right: -5px;
+  top: 0px;
+}
+
+.u_gift-item>div.item-content .commited:after {
+  content: ' commited already';
+}
+
+.u_gift-item>div.item-content .details-link, .u_gift-item>div.item-content .give-less-link {
+  font-size: 0.8em;
+  color: var(--color4);
+}
+
+.u_gift-item .give-less {
+  display: none;
+}
+
+.u_gift-item.isGivingLess .give-less {
+  display: block
+}
+
+.u_gift-item.isGivingLess .give-default {
+  display: none;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "giftlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws -p 7777 --verbose -n "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/42pe/GiftList.git"
+  },
+  "author": "42pe + jcakec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/42pe/GiftList/issues"
+  },
+  "homepage": "https://github.com/42pe/GiftList#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
