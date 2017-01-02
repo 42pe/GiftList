@@ -6,10 +6,15 @@
   --color0-07: rgba(255, 255, 255, 0.75);
   --color1: rgba(255, 111, 89, 1);
   --color2: rgba(37, 68, 65, 1);
+  --color2-07: rgba(37, 68, 65, 0.7);
   --color3: rgba(67, 170, 139, 1);
   --color4: rgba(178, 176, 155, 1);
   --color5: rgba(239, 48, 84, 1);
   --transTime: 300ms;
+  --resp-sm: 576px;
+  --resp-md: 768px;
+  --resp3-lg: 992px;
+  --resp4-xlg: 1200px;
 }
 
 
@@ -48,6 +53,10 @@
   opacity: 0.5;
 }
 
+.img-container>img {
+  max-width: 100%;
+}
+
 
 /* General styles */
 
@@ -77,6 +86,15 @@ header.main-header {
   padding: 0;
   max-height: 0px;
   transition: max-height var(--transTime) ease, padding var(--transTime) ease;
+}
+
+.u_gift-list-status-bar a {
+  color: var(--color0-07);
+}
+
+.u_gift-list-status-bar a.active {
+  color: var(--color0);
+  font-weight: bold;
 }
 
 .u_gift-list-status-bar b {
@@ -205,4 +223,39 @@ header.main-header {
 
 .u_gift-item.isCommitted .give-default {
   display: none;
+}
+
+.u_gift-detail-modal .modal-header {
+  background-color: var(--color1);
+  color: var(--color0);
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.u_gift-detail-modal .carousel {
+  margin-bottom: 15px;
+}
+
+.u_gift-detail-modal .price-area {
+  position: relative;
+}
+
+.u_gift-detail-modal .price {
+  color: var(--color5);
+  font-weight: bolder;
+  font-size: 2em;
+  padding-top: 15px;
+}
+
+@media (min-width: 576px) {
+  .u_gift-detail-modal .price {
+    padding-top: 0px;
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+  }
+}
+
+.u_gift-detail-modal .info-area {
+  color: var(--color2-07);
 }
