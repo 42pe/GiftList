@@ -4,4 +4,8 @@ $(document).ready(()=>{
     $(ev.currentTarget).parents('.u_gift-item').toggleClass('isGivingLess');
   });
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 });
