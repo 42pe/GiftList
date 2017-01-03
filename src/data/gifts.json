@@ -1,0 +1,71 @@
+{"gifts": [
+  {
+    "id": "1",
+    "name": "Gift 1",
+    "locationName": "Store A",
+    "allowSimilar": true,
+    "total": 3,
+    "committed": 2,
+    "price": {
+      "price": 200,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Gift 2",
+    "locationName": "Store B",
+    "allowSimilar": false,
+    "total": 3,
+    "committed": 2,
+    "price": {
+      "price": 120,
+      "currency": "PEN"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Gift 3",
+    "locationName": "Store C",
+    "allowSimilar": false,
+    "total": 5,
+    "committed": 2,
+    "price": {
+      "price": 120,
+      "currency": "PEN"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Gift 4",
+    "total": 4,
+    "committed": 4,
+    "price": {
+      "price": 120,
+      "currency": "PEN"
+    },
+    "commitedByUser": 4
+  },
+  {
+    "id": "5",
+    "name": "Gift 5",
+    "total": 3,
+    "committed": 3,
+    "price": {
+      "price": 120,
+      "currency": "PEN"
+    },
+    "commitedByUser": 2
+  },
+  {
+    "id": "6",
+    "name": "Gift 6",
+    "total": 5,
+    "committed": 2,
+    "price": {
+      "price": 120,
+      "currency": "PEN"
+    },
+    "commitedByUser": 1
+  }
+]}
