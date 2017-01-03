@@ -20,7 +20,11 @@ const GiftListItem = React.createClass({
     if ((this.props.total - this.props.committed) > 1) {
       return <span className="qty"><i className="icon-small fa fa-plus-circle"></i> Want {this.props.total - this.props.committed} more <br/><span className="already-committed text-faded text-smaller">{this.props.committed}</span></span>
     } else {
-      return null
+      if ((this.props.total - this.props.committed) === 0) {
+        return <span className="qty"><span className="already-committed text-faded text-smaller">All</span></span>
+      } else {
+        return null
+      }
     }
   },
   render () {
