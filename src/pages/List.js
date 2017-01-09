@@ -8,16 +8,22 @@ import ExchangeRate from '../data/exchangeRates.json'
 
 const ListPage = React.createClass({
   getInitialState() {
-    this.baseCurrency = this.getBaseCurrency()
     return {
-      show: 'available'
+      show: 'available',
+      gifts: GiftsData.gifts
     }
   },
   setFilter(showString) {
     this.setState({show: showString})
   },
+  componentWillMount() {
+    this.baseCurrency = this.getBaseCurrency()
+  },
+  onGiveClick(ev) {
+    console.log(ev);
+  },
   calculateCommittedTotal() {
-    return GiftsData.gifts.reduce((total,gift,i,gifts)=>{
+    return this.state.gifts.reduce((total,gift,i,gifts)=>{
       if (gift.committedByUser) {
         if (gift.price.currency === this.baseCurrency.code) {
           return (total + parseFloat(gift.price.price))
@@ -30,13 +36,13 @@ const ListPage = React.createClass({
     },0)
   },
   countCommittedByUser() {
-    return GiftsData.gifts.reduce((total,gift,i,gifts)=>{
+    return this.state.gifts.reduce((total,gift,i,gifts)=>{
       return (gift.committedByUser) ? (total + 1) : total
     },0)
   },
   getBaseCurrency() {
     let currencies = {}
-    GiftsData.gifts.forEach((gift, i, gifts)=>{
+    this.state.gifts.forEach((gift, i, gifts)=>{
       currencies[gift.price.currency] = (currencies[gift.price.currency] !== undefined) ? currencies[gift.price.currency] + 1 : 1
     })
     let finalCurrency
@@ -49,14 +55,6 @@ const ListPage = React.createClass({
     })
     return Currencies[finalCurrency]
   },
-  getSortedGifts() {
-    if (this.state.show === 'committed') {
-      return GiftsData.gifts.sort((a,b)=>{return (b.committedByUser)?1:-1})
-    } else {
-      return GiftsData.gifts.sort((a,b)=>{return (a.price.price > b.price.price)?-1:1})
-    }
-
-  },
   render () {
     const totalPrice = this.calculateCommittedTotal()
     const byUserQty = this.countCommittedByUser()
@@ -64,7 +62,7 @@ const ListPage = React.createClass({
       <div className='u_page u_page__ListPage'>
         <Header />
         <StatusBar show={this.state.show} changeFilter={this.setFilter} committedTotalPrice={totalPrice} committedQty={byUserQty} baseCurrencySymbol={this.baseCurrency.symbol} />
-        <GiftList gifts={this.getSortedGifts()} show={this.state.show} />
+        <GiftList gifts={this.state.gifts} show={this.state.show} onGiveClick={this.onGiveClick}/>
       </div>
     )
   }
