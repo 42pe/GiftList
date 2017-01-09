@@ -49,6 +49,14 @@ const ListPage = React.createClass({
     })
     return Currencies[finalCurrency]
   },
+  getSortedGifts() {
+    if (this.state.show === 'committed') {
+      return GiftsData.gifts.sort((a,b)=>{return (b.committedByUser)?1:-1})
+    } else {
+      return GiftsData.gifts.sort((a,b)=>{return (a.price.price > b.price.price)?-1:1})
+    }
+
+  },
   render () {
     const totalPrice = this.calculateCommittedTotal()
     const byUserQty = this.countCommittedByUser()
@@ -56,7 +64,7 @@ const ListPage = React.createClass({
       <div className='u_page u_page__ListPage'>
         <Header />
         <StatusBar show={this.state.show} changeFilter={this.setFilter} committedTotalPrice={totalPrice} committedQty={byUserQty} baseCurrencySymbol={this.baseCurrency.symbol} />
-        <GiftList gifts={GiftsData.gifts.sort((a,b)=>{return (a.price.price > b.price.price)?-1:1})} show={this.state.show} />
+        <GiftList gifts={this.getSortedGifts()} show={this.state.show} />
       </div>
     )
   }
