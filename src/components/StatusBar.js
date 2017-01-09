@@ -28,7 +28,7 @@ const StatusBar = React.createClass({
         <div className="container">
           <div className="row flex-items-xs-between">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg">
-              Committed to <b>{this.props.committedQty} items</b> for aproximately <b><i className="icon-small fa fa-tag"></i> {this.props.committedTotalPrice}</b>
+              Committed to <b>{this.props.committedQty} items</b> for aproximately <b><i className="icon-small fa fa-tag"></i> {this.props.baseCurrencySymbol} {this.props.committedTotalPrice.toFixed(2)}</b>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg text-lg-right">
               <b>See:</b> {filterButtons[2]} | {filterButtons[1]} | {filterButtons[0]}

@@ -45,7 +45,7 @@ const GiftListItem = React.createClass({
     }
   },
   renderQty() {
-    return (this.props.qty > 1) ? (<span className="qty"><i className="icon-small fa fa-shopping-bag"></i> {this.props.qty} of these</span>) : null
+    return (this.props.qty > 1) ? (<span className="qty"><i className="icon-small fa fa-shopping-bag"></i> Bundle of {this.props.qty}</span>) : null
   },
   renderIsCommitted() {
     if (this.props.isCommitted) {
