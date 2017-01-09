@@ -4,68 +4,97 @@
     "name": "Gift 1",
     "locationName": "Store A",
     "allowSimilar": true,
-    "total": 3,
-    "committed": 2,
+    "isCommitted": false,
+    "qty": 1,
     "price": {
       "price": 200,
       "currency": "USD"
-    }
+    },
+    "imgs": [
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" }
+    ]
   },
   {
     "id": "2",
     "name": "Gift 2",
     "locationName": "Store B",
     "allowSimilar": false,
-    "total": 3,
-    "committed": 2,
+    "isCommitted": false,
+    "qty": 3,
     "price": {
       "price": 120,
       "currency": "PEN"
-    }
+    },
+    "imgs": [
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" }
+    ]
   },
   {
     "id": "3",
     "name": "Gift 3",
     "locationName": "Store C",
     "allowSimilar": false,
-    "total": 5,
-    "committed": 2,
+    "isCommitted": true,
+    "qty": 5,
     "price": {
       "price": 120,
       "currency": "PEN"
-    }
+    },
+    "imgs": [
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" }
+    ]
   },
   {
     "id": "4",
     "name": "Gift 4",
-    "total": 4,
-    "committed": 4,
+    "qty": 4,
+    "isCommitted": true,
     "price": {
       "price": 120,
       "currency": "PEN"
     },
-    "committedByUser": 4
+    "committedByUser": true,
+    "imgs": [
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" }
+    ]
   },
   {
     "id": "5",
     "name": "Gift 5",
-    "total": 3,
-    "committed": 3,
+    "qty": 3,
+    "isCommitted": false,
     "price": {
       "price": 120,
       "currency": "PEN"
     },
-    "committedByUser": 2
+    "committedByUser": true,
+    "imgs": [
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" }
+    ]
   },
   {
     "id": "6",
     "name": "Gift 6",
-    "total": 5,
-    "committed": 2,
+    "qty": 5,
+    "isCommitted": false,
     "price": {
       "price": 120,
       "currency": "PEN"
     },
-    "committedByUser": 1
+    "imgs": [
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" },
+      { "url": "http://images.landofnod.com/is/image/LandOfNod/Crib_Anderson_Walnut_V1/$web_setitem$/130831065716/andersen-crib-american-walnut.jpg" }
+    ]
   }
 ]}
