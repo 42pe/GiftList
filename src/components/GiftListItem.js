@@ -1,7 +1,22 @@
 import React from 'react'
+const { string, bool, number, shape, arrayOf } = React.PropTypes
 import Currencies from '../data/currency.json'
 
 const GiftListItem = React.createClass({
+  propTypes: {
+    name: string.isRequired,
+    locationName: string,
+    allowSimilar: bool,
+    isCommitted: bool.isRequired,
+    qty: number.isRequired,
+    price: shape({
+      price: number.isRequired,
+      currency: string.isRequired
+    }).isRequired,
+    imgs: arrayOf(shape({
+      url: string.isRequired
+    })).isRequired
+  },
   renderLocationInfo () {
     if (this.props.locationName !== undefined) {
       return <span className="location"><i className="icon-small fa fa-map-marker"></i> {this.props.locationName}</span>

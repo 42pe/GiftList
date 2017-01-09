@@ -70,7 +70,7 @@
     "id": "5",
     "name": "Gift 5",
     "qty": 3,
-    "isCommitted": false,
+    "isCommitted": true,
     "price": {
       "price": 120,
       "currency": "PEN"
