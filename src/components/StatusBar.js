@@ -2,6 +2,7 @@ import React from 'react'
 
 const StatusBar = React.createClass({
   filterClick(ev) {
+    console.log(ev);
     this.props.changeFilter(ev.target.dataset.filtervalue)
   },
   renderButtons() {

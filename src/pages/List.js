@@ -62,7 +62,7 @@ const ListPage = React.createClass({
       <div className='u_page u_page__ListPage'>
         <Header />
         <StatusBar show={this.state.show} changeFilter={this.setFilter} committedTotalPrice={totalPrice} committedQty={byUserQty} baseCurrencySymbol={this.baseCurrency.symbol} />
-        <GiftList gifts={this.state.gifts} show={this.state.show} onGiveClick={this.onGiveClick}/>
+        <GiftList gifts={this.state.gifts} show={this.state.show} baseCurrency={this.baseCurrency} onGiveClick={this.onGiveClick}/>
       </div>
     )
   }

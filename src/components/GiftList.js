@@ -1,12 +1,26 @@
 import React from 'react'
 import GiftListItem from './GiftListItem'
+import ExchangeRate from '../data/exchangeRates.json'
+const { oneOf } = React.PropTypes
 
 const GiftList = React.createClass({
+  propTypes: {
+    show: oneOf(['available','committed','all'])
+  },
+  getDefaultProps() {
+    return {
+      show: 'available'
+    }
+  },
   getSortedGifts() {
     if (this.props.show === 'committed') {
       return this.props.gifts.sort((a,b)=>{return (b.committedByUser)?1:-1})
     } else {
-      return this.props.gifts.sort((a,b)=>{return (a.price.price > b.price.price)?-1:1})
+      return this.props.gifts.sort((a,b)=>{
+        const aPrice = (a.price.currency === this.props.baseCurrency.code) ? a.price.price : parseFloat(a.price.price) * parseFloat(ExchangeRate[a.price.currency][this.props.baseCurrency.code])
+        const bPrice = (b.price.currency === this.props.baseCurrency.code) ? b.price.price : parseFloat(b.price.price) * parseFloat(ExchangeRate[b.price.currency][this.props.baseCurrency.code])
+        return (aPrice > bPrice)?-1:1
+      })
     }
   },
   render () {
