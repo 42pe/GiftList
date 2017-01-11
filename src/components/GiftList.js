@@ -17,9 +17,10 @@ const GiftList = React.createClass({
       return this.props.gifts.sort((a,b)=>{return (b.committedByUser)?1:-1})
     } else {
       return this.props.gifts.sort((a,b)=>{
+        // sort is based on the exchange rate
         const aPrice = (a.price.currency === this.props.baseCurrency.code) ? a.price.price : parseFloat(a.price.price) * parseFloat(ExchangeRate[a.price.currency][this.props.baseCurrency.code])
         const bPrice = (b.price.currency === this.props.baseCurrency.code) ? b.price.price : parseFloat(b.price.price) * parseFloat(ExchangeRate[b.price.currency][this.props.baseCurrency.code])
-        return (aPrice > bPrice)?-1:1
+        return (aPrice >= bPrice)?-1:1
       })
     }
   },
@@ -41,7 +42,7 @@ const GiftList = React.createClass({
               }
             })
             .map((gift)=>{
-              return (<GiftListItem key={gift.id} {...gift} onGiveClick={this.props.onGiveClick} />)
+              return (<GiftListItem key={gift.id} {...gift} giveGift={this.props.giveGift} />)
             })}
         </div>
       </main>

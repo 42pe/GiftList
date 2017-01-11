@@ -83,7 +83,7 @@ const GiftListItem = React.createClass({
           <div className="actions col-xs-12 col-sm-12 col-md-12 col-lg text-lg-right">
             <h5 className="price lg"><i className="icon-small fa fa-tag"></i> {currency}{this.props.price.price}</h5>
             <div className="give-default">
-              <button type="button" className="btn btn-cta" onClick={this.props.onGiveClick}><i className="icon-big fa fa-gift"></i> Give!</button><br/>
+              <button type="button" className="btn btn-cta" onClick={()=>{this.props.giveGift(this.props.id)}}><i className="icon-big fa fa-gift"></i> Give!</button><br/>
             </div>
           </div>
         </div>

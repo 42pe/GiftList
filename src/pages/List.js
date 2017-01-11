@@ -19,8 +19,12 @@ const ListPage = React.createClass({
   componentWillMount() {
     this.baseCurrency = this.getBaseCurrency()
   },
-  onGiveClick(ev) {
-    console.log(ev);
+  giveGift(giftId) {
+    const newGifts = this.state.gifts.slice()
+    const modifiedGift = newGifts.filter((gift)=>{return gift.id === giftId})[0]
+    modifiedGift.isCommitted = true;
+    modifiedGift.committedByUser = true;
+    this.setState({gifts: newGifts});
   },
   calculateCommittedTotal() {
     return this.state.gifts.reduce((total,gift,i,gifts)=>{
@@ -62,7 +66,7 @@ const ListPage = React.createClass({
       <div className='u_page u_page__ListPage'>
         <Header />
         <StatusBar show={this.state.show} changeFilter={this.setFilter} committedTotalPrice={totalPrice} committedQty={byUserQty} baseCurrencySymbol={this.baseCurrency.symbol} />
-        <GiftList gifts={this.state.gifts} show={this.state.show} baseCurrency={this.baseCurrency} onGiveClick={this.onGiveClick}/>
+        <GiftList gifts={this.state.gifts} show={this.state.show} baseCurrency={this.baseCurrency} giveGift={this.giveGift}/>
       </div>
     )
   }
